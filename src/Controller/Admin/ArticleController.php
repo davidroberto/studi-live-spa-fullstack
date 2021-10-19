@@ -20,7 +20,7 @@ class ArticleController extends AbstractController
     {
         $articles = $articleRepository->findAll();
 
-        return $this->render('admin/articles.html.twig', [
+        return $this->render('admin/article/articles.html.twig', [
             'articles' => $articles
         ]);
     }
@@ -53,7 +53,7 @@ class ArticleController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->render('/admin/article_create.html.twig', [
+        return $this->render('/admin/article/article_create.html.twig', [
             'articleForm' => $articleForm->createView()
         ]);
     }
@@ -74,7 +74,7 @@ class ArticleController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->render('/admin/article_create.html.twig', [
+        return $this->render('/admin/article/article_create.html.twig', [
             'articleForm' => $articleForm->createView()
         ]);
 

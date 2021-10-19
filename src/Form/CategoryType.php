@@ -15,9 +15,6 @@ class CategoryType extends AbstractType
             ->add('title')
             ->add('description')
             ->add('color')
-            ->add('slug')
-            ->add('createdAt')
-            ->add('updatedAt')
         ;
     }
 
